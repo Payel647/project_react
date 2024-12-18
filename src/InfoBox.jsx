@@ -6,8 +6,9 @@ import  './InfoBox.css';
 
 import Typography from '@mui/material/Typography';
 export default function InfoBox(){
-  const INIT_URL="https://images.unsplash.com/photo-1599435214324-d71096238079?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8d2hlYXRoZXJ8ZW58MHx8MHx8fDA%3D";
+  const INIT_URL="https://cdn.24.co.za/files/Cms/General/d/9361/25c7ac4faf53459183019d477be4da1c.jpg";
     let Info={
+      feelsLike:24.84,
       city:"Delhi",
         temp:25.05,
         tempMin:25.05,
@@ -18,8 +19,8 @@ export default function InfoBox(){
 
     return(
         <div className="InfoBox">
-            <h1>Weather info- {Info.weather}</h1>
-            <div className='card-container'>
+        <h1>Weather info- {Info.weather}</h1>
+       <div className="card-container">
       <Card sx={{ maxWidth: 345 }}> 
       <CardMedia
         sx={{ height: 140 }}
@@ -30,18 +31,19 @@ export default function InfoBox(){
         <Typography gutterBottom variant="h5" component="div">
         {Info.city}
         </Typography>
-        <Typography variant="body2" color="text.secondary">
-        <div>Temperature= {Info.temp}&deg;C</div>
-        <div>Humadity= {Info.humidity}</div>
-        <div>Min-Temp= {Info.tempMin}</div>
-        <div>Max-Temp= {Info.tempMax}</div>
-        <div>Feelings={Info.feelsLike}&deg;C  </div>
+        <Typography variant="body2" color="text.secondary" component={"span"}>
+        <p>Temperature= {Info.temp}&deg;C</p>
+        <p>Humadity= {Info.humidity}</p>
+        <p>Min-Temp= {Info.tempMin}</p>
+        <p>Max-Temp= {Info.tempMax}</p>
+        <p>
+          The weather can be described as <i>{Info.weather}</i>and
+          Feelings like {Info.feelsLike}&deg;C</p>
         </Typography>
       </CardContent>
-      
-    </Card>
+      </Card>
     </div>
-        </div>
+    </div>
 
     )
 }
