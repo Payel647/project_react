@@ -5,26 +5,19 @@ import CardMedia from '@mui/material/CardMedia';
 import  './InfoBox.css';
 
 import Typography from '@mui/material/Typography';
-export default function InfoBox(){
+export default function InfoBox({Info}){
   const INIT_URL="https://cdn.24.co.za/files/Cms/General/d/9361/25c7ac4faf53459183019d477be4da1c.jpg";
-    let Info={
-      feelsLike:24.84,
-      city:"Delhi",
-        temp:25.05,
-        tempMin:25.05,
-        tempMax:25.05,
-        humidity:47.25,
-        weather:"haze,"
-    }
-
-    return(
+  const COLD_URL="https://tse3.mm.bing.net/th?id=OIP.9ShlqkYDZjtMW-yIcybq1gHaEK&pid=Api&P=0&h=180";
+  const RAINY_URL="https://tse4.mm.bing.net/th?id=OIP.nX5pnQxG3pc9ZHizFdW2SgHaEK&pid=Api&P=0&h=180";
+  
+  return(
         <div className="InfoBox">
-        <h1>Weather info- {Info.weather}</h1>
+        <h1>WEATHER INFO</h1>
        <div className="card-container">
       <Card sx={{ maxWidth: 345 }}> 
       <CardMedia
-        sx={{ height: 140 }}
-        image={INIT_URL}
+        sx={{ height: 140 }} 
+        image={Info.humidity>80? RAINY_URL : Info.temp>20?INIT_URL:COLD_URL}
         title="green iguana"
       />
       <CardContent>

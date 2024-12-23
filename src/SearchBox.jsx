@@ -7,7 +7,7 @@ import './SearchBox.css';
 
 
 
-export default function SearchBox(){
+export default function SearchBox({ updateInfo}){
     let [City,setCity]=useState("");
     const  API_URL="https://api.openweathermap.org/data/2.5/weather"
     const API_KEY="c50a7e3bc3a5826f2adb51c79f4cf9ec";
@@ -33,6 +33,7 @@ export default function SearchBox(){
 
        }
        console.log(result); 
+       return result;
      
     }
 
@@ -42,17 +43,17 @@ export default function SearchBox(){
         setCity(e.target.value);
     };
 
-    let handleSubmit=(e)=>{
-        e.preventDefault();
+    let handleSubmit=async(evt)=>{
+        evt.preventDefault();
         console.log(City);
         setCity("");
-        getWeatherInfo();
+        let newInfo=await getWeatherInfo();
+        updateInfo(newInfo);
     }   
      
 
     return (
     <div className='Searchbox'>
-            <h2>WEATHER APP</h2>
             <form onSubmit={handleSubmit}>
                 <TextField id="city" 
                     label="City Name"
