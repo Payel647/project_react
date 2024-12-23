@@ -50,9 +50,7 @@ export default function SearchBox({ updateInfo}){
         let newInfo=await getWeatherInfo();
         updateInfo(newInfo);
     }   
-     
-
-    return (
+     return (
     <div className='Searchbox'>
             <form onSubmit={handleSubmit}>
                 <TextField id="city" 
