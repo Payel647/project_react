@@ -1,9 +1,10 @@
 import Card from '@mui/material/Card';
-import CardActions from '@mui/material/CardActions';
 import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 import  './InfoBox.css';
-
+import ThunderstormIcon from '@mui/icons-material/Thunderstorm';
+import AcUnitIcon from '@mui/icons-material/AcUnit';
+import WbSunnyIcon from '@mui/icons-material/WbSunny';
 import Typography from '@mui/material/Typography';
 export default function InfoBox({Info}){
   const INIT_URL="https://cdn.24.co.za/files/Cms/General/d/9361/25c7ac4faf53459183019d477be4da1c.jpg";
@@ -22,7 +23,9 @@ export default function InfoBox({Info}){
       />
       <CardContent>
         <Typography gutterBottom variant="h5" component="div">
-        {Info.city}
+        {Info.city}  {
+          Info.humidity>80? <ThunderstormIcon/> : Info.temp>20? <WbSunnyIcon/>: <AcUnitIcon/>
+        }
         </Typography>
         <Typography variant="body2" color="text.secondary" component={"span"}>
         <p>Temperature= {Info.temp}&deg;C</p>
