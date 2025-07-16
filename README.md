@@ -32,13 +32,6 @@ A responsive and modern weather application built with **React.js** and **Materi
 
 ![Weather App Screenshot](https://github.com/Payel647/project_react/blob/main/Weather%20App.png)
 
-
----
-
-## 🌐 Live Demo
-
-🚀 [Live App](https://stupendous-cactus-0341dc.netlify.app/)
-
 ---
 
 ### 🔗 Clone the Repository
