@@ -30,7 +30,7 @@ A responsive and modern weather application built with **React.js** and **Materi
 
 ## 📸 Screenshots
 
-![Weather App Screenshot](https://your-screenshot-link.com)
+![Weather App Screenshot](https://github.com/Payel647/project_react/blob/main/Weather%20App.png)
 
 
 ---
