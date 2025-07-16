@@ -1,4 +1,4 @@
-# 🌦️ Weather App
+#  Weather App
 
 A responsive and modern weather application built with **React.js** and **Material UI**, **OpenWeather API**. This app allows users to search for any city and get real-time weather updates in a clean, card-style layout.
 
@@ -37,11 +37,9 @@ A responsive and modern weather application built with **React.js** and **Materi
 
 ## 🌐 Live Demo
 
-🚀 [Live App](https://your-deployment-link.com)
+🚀 [Live App](https://stupendous-cactus-0341dc.netlify.app/)
 
 ---
-
-## 🧰 Getting Started
 
 ### 🔗 Clone the Repository
 
